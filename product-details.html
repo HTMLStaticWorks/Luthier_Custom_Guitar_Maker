@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrument Details | StringCraft Luthier</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand brand-font fs-3 text-glow" href="index.html">
+                    <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="bi bi-list text-white fs-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li>
+                        <li class="nav-item"><a class="nav-link" href="woods.html">Woods</a></li>
+                        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="login.html" class="btn btn-outline-premium btn-sm">Login</a>
+                        <a href="signup.html" class="btn btn-premium btn-sm">Sign Up</a>
+                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm">
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
+                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm">
+                            <i class="bi bi-translate"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img id="product-hero-bg" src="" alt="Instrument Detail" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center">
+            <h1 id="product-title" class="hero-title">Instrument Name</h1>
+            <p id="product-wood-summary" class="hero-subtitle mb-0">Wood specifications summary.</p>
+        </div>
+    </section>
+
+    <!-- Detail Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 reveal-left">
+                    <div class="product-main-img rounded-4 overflow-hidden shadow-lg mb-4">
+                        <img id="product-main-img" src="" alt="Main View" class="w-100 object-fit-cover" style="height: 500px;">
+                    </div>
+                    <div id="product-gallery-grid" class="row g-2">
+                        <!-- Gallery images will be injected here -->
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal-left" style="transition-delay: 0.2s;">
+                    <div class="d-flex justify-content-between align-items-start mb-4">
+                        <div>
+                            <span id="product-category" class="badge bg-primary px-3 py-2 mb-3">Category</span>
+                            <h2 id="product-name" class="display-4 fw-bold">Instrument Name</h2>
+                        </div>
+                        <h3 id="product-price" class="text-primary fw-bold text-glow">$0,000</h3>
+                    </div>
+                    
+                    <p id="product-description" class="lead text-secondary mb-5">
+                        Instrument description loading...
+                    </p>
+
+                    <h4 class="mb-4 text-glow">Technical Specifications</h4>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover border-secondary">
+                            <tbody id="product-specs-body">
+                                <!-- Specs will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-grid gap-3 mt-5">
+                        <a href="contact.html" class="btn btn-premium btn-lg">Secure This Instrument</a>
+                        <p class="text-secondary small text-center"><i class="bi bi-shield-check me-2"></i> Lifetime structural warranty included.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Instruments -->
+    <section class="section-padding bg-darker">
+        <div class="container">
+            <h2 class="section-title mb-5">Similar Creations</h2>
+            <div class="row g-4" id="related-products-grid">
+                <!-- Related products will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand brand-font fs-3 text-glow mb-4 d-block" href="index.html">
+                        <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
+                    </a>
+                    <p class="text-secondary pe-lg-5">Crafting the future of sound through traditional luthier techniques and exotic wood selection.</p>
+                </div>
+                <!-- Standard Footer Links -->
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home 1</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                        <li><a href="shop.html" class="footer-link">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="process.html" class="footer-link">Process</a></li>
+                        <li><a href="woods.html" class="footer-link">Woods</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-4">Follow Us</h5>
+                    <div class="d-flex">
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center pt-4">
+                <p class="text-secondary small mb-0">&copy; 2026 StringCraft Luthier. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            const product = window.guitarProducts[productId];
+
+            if (product) {
+                // Populate basic info
+                document.title = `${product.name} | StringCraft Luthier`;
+                document.getElementById('product-title').textContent = product.name;
+                document.getElementById('product-name').textContent = product.name;
+                document.getElementById('product-category').textContent = product.category;
+                document.getElementById('product-price').textContent = product.price;
+                document.getElementById('product-wood-summary').textContent = product.wood;
+                document.getElementById('product-description').textContent = product.description;
+                document.getElementById('product-hero-bg').src = product.image;
+                document.getElementById('product-main-img').src = product.image;
+
+                // Populate specs
+                const specsBody = document.getElementById('product-specs-body');
+                product.specs.forEach(spec => {
+                    const row = `<tr>
+                        <td class="text-primary fw-bold" style="width: 30%;">${spec.label}</td>
+                        <td class="text-secondary">${spec.value}</td>
+                    </tr>`;
+                    specsBody.innerHTML += row;
+                });
+
+                // Populate gallery
+                const galleryGrid = document.getElementById('product-gallery-grid');
+                product.gallery.forEach(img => {
+                    const col = `<div class="col-4">
+                        <img src="${img}" class="img-fluid rounded-2 cursor-pointer grayscale-hover" onclick="document.getElementById('product-main-img').src='${img}'">
+                    </div>`;
+                    galleryGrid.innerHTML += col;
+                });
+
+                // Related Products (random 3)
+                const relatedGrid = document.getElementById('related-products-grid');
+                const otherIds = Object.keys(window.guitarProducts).filter(id => id !== productId);
+                otherIds.slice(0, 3).forEach(id => {
+                    const p = window.guitarProducts[id];
+                    const col = `
+                        <div class="col-md-4">
+                            <div class="card-premium h-100">
+                                <div class="card-img-wrapper" style="height: 250px;">
+                                    <img src="${p.image}" alt="${p.name}">
+                                </div>
+                                <div class="card-content">
+                                    <h4>${p.name}</h4>
+                                    <p class="text-secondary small">${p.category}</p>
+                                    <a href="product-details.html?id=${id}" class="text-primary fw-bold">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    relatedGrid.innerHTML += col;
+                });
+
+            } else {
+                // Handle product not found
+                document.querySelector('.section-padding').innerHTML = `
+                    <div class="container text-center py-5">
+                        <h2 class="display-1 text-primary">404</h2>
+                        <h3>Instrument Not Found</h3>
+                        <p class="text-secondary">It seems this masterpiece has already found a home.</p>
+                        <a href="shop.html" class="btn btn-premium mt-4">Back to Shop</a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

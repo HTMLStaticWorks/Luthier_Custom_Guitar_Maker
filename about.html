@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | StringCraft Luthier</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand brand-font fs-3 text-glow" href="index.html">
+                    <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <i class="bi bi-list text-white fs-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li>
+                        <li class="nav-item"><a class="nav-link" href="woods.html">Woods</a></li>
+                        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="login.html" class="btn btn-outline-premium btn-sm">Login</a>
+                        <a href="signup.html" class="btn btn-premium btn-sm">Sign Up</a>
+                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm">
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
+                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm">
+                            <i class="bi bi-translate"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="images/hero-about.png" alt="About the Luthier" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center">
+            <h1 class="hero-title">Our Story</h1>
+            <p class="hero-subtitle mb-0">Crafting excellence through decades of passion and wood shavings.</p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal-left">
+                    <h2 class="section-title mb-4">Artisanal Roots</h2>
+                    <p class="lead text-primary mb-4">It all started in a small basement workshop with a single slab of
+                        mahogany.</p>
+                    <p class="text-secondary mb-4">Founded by Marcus Thorne in 2005, StringCraft Luthier was born from
+                        the desire to create instruments that bridge the gap between vintage tradition and modern
+                        precision. Marcus spent years studying the acoustic properties of wood, learning how to
+                        manipulate vibration to produce the "Thorne Tone" that artists now crave.</p>
+                    <p class="text-secondary">Today, our team has grown, but our mission remains the same: every
+                        instrument that leaves our workshop must be a testament to the artisan's touch.</p>
+                </div>
+                <div class="col-lg-6 reveal-left" style="transition-delay: 0.3s;">
+                    <img src="https://images.pexels.com/photos/3018141/pexels-photo-3018141.jpeg"
+                        alt="Old Workshop Photo"
+                        class="img-fluid rounded-4 shadow-lg grayscale-hover img-content-match">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Section -->
+    <section class="section-padding bg-darker">
+        <div class="container">
+            <div class="text-center mb-5 reveal-left">
+                <h2 class="section-title">The Workshop</h2>
+                <p class="text-secondary">Where traditional tools meet precision engineering.</p>
+            </div>
+            <div class="row g-4 mb-5">
+                <div class="col-md-4 reveal-left">
+                    <div class="card-premium h-100">
+                        <div class="card-content text-center">
+                            <i class="bi bi-tools text-primary fs-1 mb-3 d-block"></i>
+                            <h4 class="mb-3">Traditional Edge</h4>
+                            <p class="text-secondary small">We use hand planes, chisels, and scrapers for the final
+                                voicing of every soundboard, just as master builders have for centuries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-left" style="transition-delay: 0.2s;">
+                    <div class="card-premium h-100">
+                        <div class="card-content text-center">
+                            <i class="bi bi-cpu text-primary fs-1 mb-3 d-block"></i>
+                            <h4 class="mb-3">Modern Accuracy</h4>
+                            <p class="text-secondary small">Custom CNC technology ensures that our neck profiles and
+                                bridge placements are accurate to within a thousandth of an inch.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-left" style="transition-delay: 0.4s;">
+                    <div class="card-premium h-100">
+                        <div class="card-content text-center">
+                            <i class="bi bi-thermometer-sun text-primary fs-1 mb-3 d-block"></i>
+                            <h4 class="mb-3">Controlled Environment</h4>
+                            <p class="text-secondary small">Our wood library is kept at a strictly controlled 45%
+                                humidity to ensure long-term stability in any climate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal-left">
+                <img src="images/hero-gallery.png" alt="Workshop Interior" class="img-fluid rounded-5 shadow-lg w-100"
+                    style="height: 400px; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal-left">
+                    <h2 class="section-title mb-4">Our Core Philosophy</h2>
+                    <blockquote class="blockquote border-start border-primary border-4 ps-4 mb-4">
+                        <p class="fs-4 fst-italic">"The wood tells you what it wants to become. My job is simply to
+                            listen and remove everything that isn't a guitar."</p>
+                        <footer class="blockquote-footer mt-2">Marcus Thorne, <cite title="Source Title">Master
+                                Luthier</cite></footer>
+                    </blockquote>
+                    <p class="text-secondary mb-4">We reject the assembly-line approach to guitar making. We believe in
+                        the slow craft—where every joint is hand-fitted and every finish is hand-rubbed. This attention
+                        to detail results in an instrument that feels played-in from the very first strum.</p>
+                    <div class="text-center">
+                        <a href="woods.html" class="btn btn-outline-premium">Explore our Wood Philosophy</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal-left" style="transition-delay: 0.3s;">
+                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
+                        <img src="https://images.pexels.com/photos/1696833/pexels-photo-1696833.jpeg"
+                            alt="Handcarved Details" class="w-100 h-100 object-fit-cover transition-smooth">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Order CTA -->
+    <section class="section-padding bg-darker">
+        <div class="container">
+            <div class="bg-primary rounded-5 p-5 text-center text-white shadow-lg reveal-left">
+                <h2 class="h1 mb-4">Ready to build your dream?</h2>
+                <p class="lead mb-5 opacity-75">Join our waiting list for a bespoke consultation with our Master
+                    Luthier.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="contact.html" class="btn btn-light btn-lg text-primary fw-bold">Contact Us Now</a>
+                    <a href="process.html" class="btn btn-outline-light btn-lg">View Build Process</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand brand-font fs-3 text-glow mb-4 d-block" href="index.html">
+                        <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
+                    </a>
+                    <p class="text-secondary pe-lg-5">Crafting the future of sound through traditional luthier
+                        techniques and exotic wood selection.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home 1</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                        <li><a href="shop.html" class="footer-link">Instruments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="process.html" class="footer-link">Custom Build</a></li>
+                        <li><a href="woods.html" class="footer-link">Wood Selection</a></li>
+                        <li><a href="contact.html" class="footer-link">Consultation</a></li>
+                        <li><a href="#" class="footer-link">Repair Shop</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-secondary small">Get exclusive previews of our latest builds.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-dark text-white border-secondary"
+                            placeholder="Email Address">
+                        <button class="btn btn-premium" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center pt-4">
+                <p class="text-secondary small mb-0">&copy; 2026 StringCraft Luthier. All Rights Reserved. Created by
+                    Premium Designers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
