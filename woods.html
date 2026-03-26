@@ -34,14 +34,14 @@
 
     <!-- Header / Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-xl fixed-top">
             <div class="container">
                 <a class="navbar-brand brand-font fs-3 text-glow" href="index.html">
                     <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav">
-                    <i class="bi bi-list text-white fs-1"></i>
+                    <i class="bi bi-list fs-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
@@ -57,10 +57,10 @@
                     <div class="d-flex align-items-center gap-3">
                         <a href="login.html" class="btn btn-outline-premium btn-sm">Login</a>
                         <a href="signup.html" class="btn btn-premium btn-sm">Sign Up</a>
-                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm">
+                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm" aria-label="Toggle Theme">
                             <i class="bi bi-sun-fill"></i>
                         </button>
-                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm">
+                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
                     </div>
@@ -75,8 +75,12 @@
             alt="Tonewood Selection" class="hero-bg">
         <div class="hero-overlay"></div>
         <div class="container hero-content text-center">
-            <h1 class="hero-title">Tonewood Library</h1>
-            <p class="hero-subtitle mb-0">The biological DNA of your future sound.</p>
+            <h1 class="hero-title">The Nature of <br><span class="text-primary">Tone.</span></h1>
+            <p class="hero-subtitle mb-5">Explore our curated vault of exotic tonewoods, each selected for its singular resonance, stunning grain, and the stories it will tell through your music.</p>
+            <div class="hero-btns d-flex flex-wrap justify-content-center gap-3">
+                <a href="contact.html" class="btn btn-premium btn-lg">Start Your Build</a>
+                <a href="process.html" class="btn btn-outline-premium btn-lg">Explore Process</a>
+            </div>
         </div>
     </section>
 
@@ -99,8 +103,12 @@
                             <p class="text-secondary small mb-4">Known for its warm, deep response with excellent
                                 resonance and sustain in the mid-range.</p>
                             <label class="small text-primary mb-1">Tonal Profile: Warm</label>
-                            <div class="tone-graph mb-3">
-                                <div class="tone-bar" style="width: 85%;"></div>
+                            <div class="tone-stars mb-3">
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-half active"></i>
                             </div>
                         </div>
                     </div>
@@ -115,8 +123,12 @@
                             <p class="text-secondary small mb-4">Bright and punchy with a rapid attack. Its stunning
                                 visual depth makes it a favorite for carved tops.</p>
                             <label class="small text-primary mb-1">Tonal Profile: Bright</label>
-                            <div class="tone-graph mb-3">
-                                <div class="tone-bar" style="width: 90%;"></div>
+                            <div class="tone-stars mb-3">
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-fill active"></i>
                             </div>
                         </div>
                     </div>
@@ -132,8 +144,12 @@
                             <p class="text-secondary small mb-4">Highly resonant across the spectrum. Clear highs and
                                 defined lows, perfect for vintage-style electrics.</p>
                             <label class="small text-primary mb-1">Tonal Profile: Balanced</label>
-                            <div class="tone-graph mb-3">
-                                <div class="tone-bar" style="width: 80%;"></div>
+                            <div class="tone-stars mb-3">
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star-fill active"></i>
+                                <i class="bi bi-star"></i>
                             </div>
                         </div>
                     </div>
@@ -152,7 +168,9 @@
                 <div class="col-md-6 reveal-left">
                     <div class="card-premium h-100">
                         <div class="card-content d-flex align-items-center">
-                            <i class="bi bi-circle-fill text-dark fs-1 me-4"></i>
+                            <div class="rounded-circle overflow-hidden me-4 flex-shrink-0 shadow-sm" style="width: 60px; height: 60px;">
+                                <img src="https://images.pexels.com/photos/1094770/pexels-photo-1094770.jpeg" alt="Ebony" class="w-100 h-100 object-fit-cover">
+                            </div>
                             <div>
                                 <h4 class="mb-1">Gaboon Ebony</h4>
                                 <p class="text-secondary small mb-0">Extremely dense and slick. Provides a bright, clear
@@ -164,7 +182,9 @@
                 <div class="col-md-6 reveal-left" style="transition-delay: 0.2s;">
                     <div class="card-premium h-100">
                         <div class="card-content d-flex align-items-center">
-                            <i class="bi bi-circle-half text-secondary fs-1 me-4"></i>
+                            <div class="rounded-circle overflow-hidden me-4 flex-shrink-0 shadow-sm" style="width: 60px; height: 60px;">
+                                <img src="https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg" alt="Rosewood" class="w-100 h-100 object-fit-cover">
+                            </div>
                             <div>
                                 <h4 class="mb-1">Indian Rosewood</h4>
                                 <p class="text-secondary small mb-0">Warm and earthy. Its natural oils provide a smooth,
@@ -181,14 +201,16 @@
     <section class="section-padding">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0 reveal-left">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal-left text-center text-lg-start">
                     <h2 class="section-title mb-4">The Importance of Grain</h2>
                     <p class="text-secondary mb-4">Grain direction isn't just about looks. For an acoustic soundboard,
                         the tightness of the grain determines the stiffness-to-weight ratio, which directly impacts the
                         projection and volume of the instrument.</p>
                     <p class="text-secondary mb-5">We only use Master Grade timbers, hand-split to ensure that the grain
                         is perfectly perpendicular to the surface for maximum structural integrity.</p>
-                    <a href="process.html" class="btn btn-premium">See How We Carve</a>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="process.html" class="btn btn-premium">See How We Carve</a>
+                    </div>
                 </div>
                 <div class="col-lg-6 reveal-left" style="transition-delay: 0.3s;">
                     <img src="https://images.pexels.com/photos/258283/pexels-photo-258283.jpeg"
@@ -217,8 +239,7 @@
                             <h5 class="mb-2">Hard Maple</h5>
                             <p class="text-secondary small mb-3">Dense and stable. Projects a bright, focused tone with
                                 excellent sustain and minimal dead spots.</p>
-                            <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3">Bright &
-                                Stable</span>
+                            <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 badge-hover">Bright & Stable</span>
                         </div>
                     </div>
                 </div>
@@ -233,8 +254,7 @@
                             <h5 class="mb-2">Mahogany</h5>
                             <p class="text-secondary small mb-3">Classic warmth and resonance. Slightly heavier than
                                 maple, it adds character and a smooth, organic feel.</p>
-                            <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3">Warm &
-                                Rich</span>
+                            <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 badge-hover">Warm & Rich</span>
                         </div>
                     </div>
                 </div>
@@ -248,8 +268,7 @@
                             <h5 class="mb-2">Wenge</h5>
                             <p class="text-secondary small mb-3">Open-pored and striking. Known for tight low-end
                                 response and a very distinctive, modern aesthetic.</p>
-                            <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3">Tight &
-                                Modern</span>
+                            <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 badge-hover">Tight & Modern</span>
                         </div>
                     </div>
                 </div>
@@ -264,8 +283,7 @@
                             <h5 class="mb-2">Roasted Ash</h5>
                             <p class="text-secondary small mb-3">Heat-treated for maximum stability. Resists humidity
                                 changes and expresses a crystalline, airy resonance.</p>
-                            <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3">Stable &
-                                Airy</span>
+                            <span class="badge bg-primary bg-opacity-25 text-primary rounded-pill px-3 badge-hover">Stable & Airy</span>
                         </div>
                     </div>
                 </div>
@@ -284,18 +302,18 @@
                                 alt="Sustainable Forest" class="img-fluid rounded-4 shadow-lg"
                                 style="height: 220px; object-fit: cover; width: 100%;">
                         </div>
-                        <div class="col-6" style="margin-top: 2rem;">
+                        <div class="col-6">
                             <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=600"
                                 alt="Old Growth" class="img-fluid rounded-4 shadow-lg"
                                 style="height: 220px; object-fit: cover; width: 100%;">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 ps-lg-5 reveal-left" style="transition-delay: 0.2s;">
+                <div class="col-lg-6 ps-lg-5 reveal-left text-center" style="transition-delay: 0.2s;">
                     <h2 class="section-title mb-4">Sustainable Sourcing</h2>
                     <p class="lead text-secondary mb-4">We take our responsibility to the planet as seriously as our
                         responsibility to craft.</p>
-                    <div class="d-flex align-items-start mb-4">
+                    <div class="d-flex align-items-start mb-4 text-start">
                         <i class="bi bi-patch-check-fill text-primary fs-3 me-3 mt-1 flex-shrink-0"></i>
                         <div>
                             <h6 class="mb-1">FSC Certified Partners</h6>
@@ -303,7 +321,7 @@
                                 Stewardship Council certification, guaranteeing responsible forestry management.</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-start mb-4">
+                    <div class="d-flex align-items-start mb-4 text-start">
                         <i class="bi bi-recycle text-primary fs-3 me-3 mt-1 flex-shrink-0"></i>
                         <div>
                             <h6 class="mb-1">Zero-Waste Workshop</h6>
@@ -311,7 +329,7 @@
                                 strips, and workshop fuel. We account for every board foot.</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-start mb-5">
+                    <div class="d-flex align-items-start mb-5 text-start">
                         <i class="bi bi-globe-americas text-primary fs-3 me-3 mt-1 flex-shrink-0"></i>
                         <div>
                             <h6 class="mb-1">Global Traceability</h6>
@@ -319,7 +337,9 @@
                                 back to its country of origin and harvest date.</p>
                         </div>
                     </div>
-                    <a href="contact.html" class="btn btn-outline-premium">Inquire About Materials</a>
+                    <div class="d-flex justify-content-center">
+                        <a href="contact.html" class="btn btn-outline-premium">Inquire About Materials</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -329,29 +349,29 @@
     <footer>
         <div class="container">
             <div class="row g-4 mb-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 text-center text-lg-start">
                     <a class="navbar-brand brand-font fs-3 text-glow mb-4 d-block" href="index.html">
                         <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
                     </a>
                     <p class="text-secondary pe-lg-5">Crafting the future of sound through traditional luthier
                         techniques and exotic wood selection.</p>
-                    <div class="d-flex mt-4">
+                    <div class="d-flex mt-4 gap-3 justify-content-center justify-content-lg-start">
                         <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="footer-link">Home 1</a></li>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
                         <li><a href="about.html" class="footer-link">About Us</a></li>
                         <li><a href="gallery.html" class="footer-link">Gallery</a></li>
                         <li><a href="shop.html" class="footer-link">Instruments</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="mb-4">Services</h5>
                     <ul class="list-unstyled">
                         <li><a href="process.html" class="footer-link">Custom Build</a></li>

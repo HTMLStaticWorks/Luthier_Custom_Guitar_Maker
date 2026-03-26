@@ -17,14 +17,14 @@
 
     <!-- Header / Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-xl fixed-top">
             <div class="container">
                 <a class="navbar-brand brand-font fs-3 text-glow" href="index.html">
                     <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav">
-                    <i class="bi bi-list text-white fs-1"></i>
+                    <i class="bi bi-list fs-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
@@ -40,10 +40,10 @@
                     <div class="d-flex align-items-center gap-3">
                         <a href="login.html" class="btn btn-outline-premium btn-sm">Login</a>
                         <a href="signup.html" class="btn btn-premium btn-sm">Sign Up</a>
-                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm">
+                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm" aria-label="Toggle Theme">
                             <i class="bi bi-sun-fill"></i>
                         </button>
-                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm">
+                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
                     </div>
@@ -54,52 +54,67 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <img src="https://images.unsplash.com/photo-1549444463-7140e451b66b?q=80&w=1200" alt="Instruments Shop"
+        <img src="https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg" alt="Luthier Workshop"
             class="hero-bg">
         <div class="hero-overlay"></div>
         <div class="container hero-content text-center">
-            <h1 class="hero-title">Our Instruments</h1>
-            <p class="hero-subtitle mb-0">Hand-finished custom builds ready for their next journey.</p>
+            <h1 class="hero-title">The Masterpiece <br><span class="text-primary">Collection.</span></h1>
+            <p class="hero-subtitle mb-5">Explore our evolving inventory of artisan-crafted guitars and basses. Each instrument is a unique expression of tonal excellence and visual artistry, ready for the stage or the studio.</p>
+            <div class="hero-btns d-flex flex-wrap justify-content-center gap-3">
+                <a href="contact.html" class="btn btn-premium btn-lg">Start Custom Build</a>
+                <a href="process.html" class="btn btn-outline-premium btn-lg">Learn Our Process</a>
+            </div>
         </div>
     </section>
 
     <!-- Shop Section -->
     <section class="section-padding">
         <div class="container">
-            <div class="row g-5">
-                <!-- Sidebar Filters -->
-                <div class="col-lg-3 reveal-left">
-                    <div class="bg-darker p-4 rounded-4 sticky-top" style="top: 100px;">
-                        <h4 class="mb-4">Filters</h4>
-                        <div class="mb-4">
-                            <h6 class="text-primary small text-uppercase fw-bold mb-3">Model</h6>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="electricCheck" checked>
-                                <label class="form-check-label" for="electricCheck">Electric</label>
+            <!-- Horizontal Filters -->
+            <div class="row mb-5">
+                <div class="col-12 reveal-left">
+                    <div class="bg-darker p-4 rounded-4 shadow-sm">
+                        <div class="row align-items-center g-4">
+                            <div class="col-md-4">
+                                <h4 class="mb-0">Filters</h4>
                             </div>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="acousticCheck">
-                                <label class="form-check-label" for="acousticCheck">Acoustic</label>
+                            <div class="col-md-4">
+                                <div class="d-flex flex-wrap gap-4 justify-content-md-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="electricCheck" checked>
+                                        <label class="form-check-label" for="electricCheck">Electric</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="acousticCheck">
+                                        <label class="form-check-label" for="acousticCheck">Acoustic</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="bassCheck">
+                                        <label class="form-check-label" for="bassCheck">Bass</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="bassCheck">
-                                <label class="form-check-label" for="bassCheck">Bass</label>
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-center gap-3">
+                                    <label class="small text-primary text-uppercase fw-bold mb-0 text-nowrap">Price Range</label>
+                                    <div class="w-100">
+                                        <input type="range" class="form-range" min="2000" max="10000" step="100">
+                                        <div class="d-flex justify-content-between small text-secondary">
+                                            <span>$2k</span>
+                                            <span>$10k+</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-premium btn-sm text-nowrap px-4">Apply</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="mb-4">
-                            <h6 class="text-primary small text-uppercase fw-bold mb-3">Price Range</h6>
-                            <input type="range" class="form-range" min="2000" max="10000" step="100">
-                            <div class="d-flex justify-content-between small text-secondary">
-                                <span>$2,000</span>
-                                <span>$10,000+</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-premium w-100">Apply Filter</button>
                     </div>
                 </div>
+            </div>
 
+            <div class="row g-4">
                 <!-- Product Grid -->
-                <div class="col-lg-9">
+                <div class="col-lg-12">
                     <div class="row g-4">
                         <div class="col-md-6 reveal-left">
                             <div class="card-premium h-100 product-card">
@@ -116,7 +131,7 @@
                                         maple top and vintage noiseless pickups.</p>
                                     <h5 class="text-primary mb-3">$4,500</h5>
                                     <a href="product-details.html?id=monarch-flame"
-                                        class="btn btn-outline-premium btn-sm">View Details</a>
+                                        class="btn btn-premium btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +147,7 @@
                                         neck and active electronics.</p>
                                     <h5 class="text-primary mb-3">$3,800</h5>
                                     <a href="product-details.html?id=custom-bass"
-                                        class="btn btn-outline-premium btn-sm">View Details</a>
+                                        class="btn btn-premium btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +163,7 @@
                                         finish and gold hardware.</p>
                                     <h5 class="text-primary mb-3">$5,200</h5>
                                     <a href="product-details.html?id=obsidian-elite"
-                                        class="btn btn-outline-premium btn-sm">View Details</a>
+                                        class="btn btn-premium btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +179,7 @@
                                         Incredible projection and vintage character.</p>
                                     <h5 class="text-primary mb-3">$2,450</h5>
                                     <a href="product-details.html?id=pine-acoustic"
-                                        class="btn btn-outline-premium btn-sm">View Details</a>
+                                        class="btn btn-premium btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -186,10 +201,10 @@
                             scratch.</p>
                     </div>
                     <div class="col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">
-                        <a href="contact.html" class="btn btn-light btn-lg text-primary fw-bold px-4">
+                        <a href="contact.html" class="btn btn-light btn-lg text-primary fw-bold px-4 btn-hover-premium">
                             <i class="bi bi-envelope-fill me-2"></i>Start a Custom Order
                         </a>
-                        <a href="process.html" class="btn btn-outline-light btn-lg px-4">
+                        <a href="process.html" class="btn btn-outline-light btn-lg px-4 btn-hover-premium">
                             <i class="bi bi-tools me-2"></i>See Build Process
                         </a>
                     </div>
@@ -202,29 +217,29 @@
     <footer>
         <div class="container">
             <div class="row g-4 mb-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 text-center text-lg-start">
                     <a class="navbar-brand brand-font fs-3 text-glow mb-4 d-block" href="index.html">
                         <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
                     </a>
                     <p class="text-secondary pe-lg-5">Crafting the future of sound through traditional luthier
                         techniques and exotic wood selection.</p>
-                    <div class="d-flex mt-4">
+                    <div class="d-flex mt-4 gap-3 justify-content-center justify-content-lg-start">
                         <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="footer-link">Home 1</a></li>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
                         <li><a href="about.html" class="footer-link">About Us</a></li>
                         <li><a href="gallery.html" class="footer-link">Gallery</a></li>
                         <li><a href="shop.html" class="footer-link">Instruments</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="mb-4">Services</h5>
                     <ul class="list-unstyled">
                         <li><a href="process.html" class="footer-link">Custom Build</a></li>

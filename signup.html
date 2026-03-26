@@ -11,20 +11,21 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-dark auth-page">
+<body class="auth-page">
 
     <div class="auth-wrapper min-vh-100 d-flex align-items-center justify-content-center p-3 position-relative overflow-hidden">
         <!-- Floating Settings -->
-        <div class="position-absolute top-0 end-0 p-4 d-flex gap-3 z-3">
-            <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm" aria-label="Toggle theme">
+        <div class="position-absolute top-0 end-0 p-3 p-md-4 d-flex flex-nowrap gap-2 gap-md-3 floating-settings" style="z-index: 9999;">
+            <button id="theme-toggle" class="btn btn-primary rounded-circle shadow-lg" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;" aria-label="Toggle theme">
                 <i class="bi bi-sun-fill"></i>
             </button>
-            <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm" aria-label="Toggle RTL">
+            <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-lg" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;" aria-label="Toggle RTL">
                 <i class="bi bi-translate"></i>
             </button>
         </div>
         <!-- Background Decor -->
-        <img src="https://images.unsplash.com/photo-1466027552550-9bb6da0d00f6?q=80&w=1200" alt="Auth Background" class="position-absolute w-100 h-100 object-fit-cover opacity-25 start-0 top-0">
+        <img src="https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg" alt="Auth Background" class="position-absolute w-100 h-100 object-fit-cover start-0 top-0 grayscale-hover">
+        <div class="position-absolute w-100 h-100 start-0 top-0 bg-dark opacity-75"></div>
 
         <div class="container container-auth">
             <div class="row justify-content-center">
@@ -38,28 +39,28 @@
                             <p class="text-secondary small">Start your custom build journey and get access to exclusive tonewood reservation.</p>
                         </div>
                         <form id="signupForm">
-                            <div class="mb-4">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-transparent border-secondary text-white" id="firstName" placeholder="First Name">
-                                    <label for="firstName" class="text-secondary">First Name</label>
+                            <div class="row g-4">
+                                <div class="col-md-6 mb-2">
+                                    <label for="firstName" class="form-label text-secondary small fw-bold mb-2">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label for="lastName" class="form-label text-secondary small fw-bold mb-2">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
                                 </div>
                             </div>
                             <div class="mb-4">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-transparent border-secondary text-white" id="lastName" placeholder="Last Name">
-                                    <label for="lastName" class="text-secondary">Last Name</label>
-                                </div>
+                                <label for="signupEmail" class="form-label text-secondary small fw-bold mb-2">Email Address</label>
+                                <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email">
                             </div>
-                            <div class="mb-4">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control bg-transparent border-secondary text-white" id="signupEmail" placeholder="Email">
-                                    <label for="signupEmail" class="text-secondary">Email Address</label>
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <label for="signupPass" class="form-label text-secondary small fw-bold mb-2">Create Password</label>
+                                    <input type="password" class="form-control" id="signupPass" placeholder="Enter password">
                                 </div>
-                            </div>
-                            <div class="mb-5">
-                                <div class="form-floating">
-                                    <input type="password" class="form-control bg-transparent border-secondary text-white" id="signupPass" placeholder="Password">
-                                    <label for="signupPass" class="text-secondary">Create Password</label>
+                                <div class="col-md-6">
+                                    <label for="confirmPass" class="form-label text-secondary small fw-bold mb-2">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmPass" placeholder="Confirm password">
                                 </div>
                             </div>
                             <div class="form-check mb-5 small">
@@ -78,7 +79,7 @@
                                 <a href="#" class="social-btn shadow-sm" title="Apple"><i class="bi bi-apple"></i></a>
                             </div>
 
-                            <p class="text-center text-secondary small mb-0">Already an artisan member? <a href="login.html" class="text-primary text-decoration-none fw-bold">Login here</a></p>
+                            <p class="text-center text-secondary small mb-0 text-nowrap-mobile">Already an artisan member? <a href="login.html" class="text-primary text-decoration-none fw-bold">Login here</a></p>
                         </form>
                     </div>
                 </div>

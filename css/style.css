@@ -23,7 +23,7 @@
     --hero-overlay: linear-gradient(to bottom, rgba(12, 8, 6, 0.5), rgba(12, 8, 6, 0.7));
     --hero-brightness: 0.45;
     --hero-title-color: #ffffff;
-    --hero-subtitle-color: #dddddd;
+    --hero-subtitle-color: #ffffff;
 }
 
 @media (max-width: 991px) {
@@ -49,6 +49,22 @@
     --hero-brightness: 0.95;
     --hero-title-color: #000000;
     --hero-subtitle-color: #1a1a1a;
+}
+
+/* Light Mode Form Overrides */
+[data-theme="light"] .form-check-input {
+    background-color: #ffffff;
+    border-color: rgba(0,0,0,0.2);
+}
+[data-theme="light"] .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+[data-theme="light"] .form-range::-webkit-slider-runnable-track {
+    background-color: rgba(0,0,0,0.1);
+}
+[data-theme="light"] .form-range::-moz-range-track {
+    background-color: rgba(0,0,0,0.1);
 }
 
 /* Global Styles */
@@ -98,11 +114,67 @@ a {
     border-bottom: 2px solid var(--primary-color);
 }
 
+/* Navbar Toggle Icons */
+.navbar-toggler i {
+    color: var(--text-primary);
+    transition: var(--transition-base);
+}
+
+.navbar-toggler:hover i {
+    color: var(--primary-color);
+}
+
+#theme-toggle, #rtl-toggle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: var(--transition-base);
+}
+
+#theme-toggle i, #rtl-toggle i {
+    font-size: 1.2rem !important;
+    line-height: 1;
+}
+
+#theme-toggle:hover, #rtl-toggle:hover,
+#theme-toggle:active, #rtl-toggle:active,
+#theme-toggle:focus, #rtl-toggle:focus {
+    transform: rotate(15deg) scale(1.15);
+    outline: none;
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* Ensure mobile buttons have consistent width */
+@media (max-width: 1199px) {
+    .navbar-collapse .d-flex.align-items-center {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .navbar-collapse .btn-sm {
+        flex: 1;
+        max-width: 150px;
+        text-align: center;
+    }
+}
+
 /* Brand name always visible */
 .navbar-brand {
     color: var(--text-primary) !important;
     font-weight: 700;
     letter-spacing: -0.5px;
+}
+
+/* Mobile specific image fixes */
+@media (max-width: 991px) {
+    .img-fluid[style*="height: 500px"] {
+        height: auto !important;
+        max-height: 400px;
+        object-fit: contain !important;
+    }
 }
 
 .navbar-brand .brand-suffix {
@@ -187,13 +259,19 @@ a {
 }
 
 .btn-premium:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px var(--primary-glow);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px var(--primary-glow);
     color: #ffffff !important;
+    background-color: var(--secondary-color);
+}
+
+.btn-premium:active {
+    transform: translateY(-2px) scale(0.98);
 }
 
 .btn-premium:hover::before {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.3;
 }
 
 .btn-outline-premium {
@@ -209,8 +287,20 @@ a {
 .btn-outline-premium:hover {
     background: var(--primary-color);
     color: #fff !important;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px var(--primary-glow);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px var(--primary-glow);
+}
+
+.btn-outline-premium:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+.btn-premium, .btn-outline-premium {
+    cursor: pointer;
+}
+
+.hero-section .btn-outline-premium {
+    color: #ffffff !important;
 }
 
 /* Hero Section */
@@ -275,13 +365,13 @@ a {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1s forwards 0.2s;
-    color: var(--hero-title-color);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .hero-subtitle {
     font-size: clamp(1.1rem, 3vw, 1.5rem);
-    color: var(--hero-subtitle-color);
+    color: #ffffff !important;
     margin-bottom: 40px;
     opacity: 0;
     transform: translateY(30px);
@@ -408,6 +498,10 @@ a {
     background: var(--bg-color);
 }
 
+.floating-settings {
+    z-index: 100 !important;
+}
+
 .container-auth {
     z-index: 10;
 }
@@ -502,7 +596,6 @@ footer {
     background: var(--surface-light);
     color: var(--text-primary);
     font-size: 1.2rem;
-    margin-right: 15px;
     transition: var(--transition-base);
 }
 
@@ -542,6 +635,22 @@ footer {
 
 /* Responsive Grid Adjustments */
 @media (max-width: 991px) {
+    .glass-card {
+        padding: 40px 20px;
+    }
+    .btn-lg {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+    .container-auth .text-nowrap-mobile {
+        white-space: nowrap;
+        font-size: 0.85rem;
+    }
+    .container-auth {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .navbar-collapse {
         background: var(--bg-color);
         padding: 30px;
@@ -554,6 +663,9 @@ footer {
     position: relative;
     overflow: hidden;
     min-height: 320px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: var(--transition-smooth);
 }
 
 .process-step-item img {
@@ -594,6 +706,25 @@ footer {
     background: #f0f0f0 !important;
     color: #111 !important;
     border-color: #ccc !important;
+}
+
+/* Ensure footer input visibility in dark mode */
+footer .form-control {
+    color: #ffffff !important;
+}
+
+footer .form-control::placeholder {
+    color: #a1a1aa !important; /* Legible grey for placeholder in dark mode */
+    opacity: 1 !important;
+}
+
+footer .form-control {
+    color: #ffffff !important;
+}
+
+footer .form-control::placeholder {
+    color: #a1a1aa !important; /* Legible grey for placeholder */
+    opacity: 1;
 }
 
 /* ---- Back to Top Button ---- */
@@ -729,13 +860,325 @@ footer {
 }
 
 .social-btn:hover {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: #fff;
-    transform: translateY(-3px);
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px var(--primary-glow);
+}
+
+.social-btn:hover i {
+    color: #ffffff !important;
 }
 
 [data-theme="light"] .social-btn {
     background: rgba(0, 0, 0, 0.05);
+    color: #1c0e08;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Premium Hover for Sign-up Links */
+.text-primary.fw-bold:hover {
+    color: var(--secondary-color) !important;
+    text-decoration: underline !important;
+    letter-spacing: 0.5px;
+    transition: var(--transition-base);
+}
+
+/* ---- CTA Link Highlighted ---- */
+.cta-link-highlighted {
+    color: #3b82f6 !important;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition-base);
+    font-size: 1.15rem;
+    padding: 5px 0;
+}
+
+[data-theme="light"] .cta-link-highlighted {
+    color: #2563eb !important;
+}
+
+.cta-link-highlighted::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    background: currentColor;
+    transition: var(--transition-smooth);
+    border-radius: 2px;
+}
+
+.cta-link-highlighted:hover {
+    transform: translateY(-2px) scale(1.05);
+    color: #60a5fa !important; /* Lighter blue on hover */
+}
+
+.cta-link-highlighted:hover::after {
+    width: 100%;
+}
+
+.cta-link-highlighted i {
+    transition: var(--transition-smooth);
+}
+
+.cta-link-highlighted:hover i {
+    transform: translateX(8px);
+}
+
+.cta-link-highlighted:active {
+    transform: scale(0.98);
+}
+
+/* ---- Workshop Gallery Home 2 ---- */
+.workshop-gallery-item {
+    transition: var(--transition-base);
+}
+
+.workshop-gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+.workshop-gallery-item:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.workshop-gallery-item:hover .card-img-wrapper {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important;
+}
+
+/* ---- Contact Hover Items Home 2 ---- */
+.contact-hover-item {
+    transition: var(--transition-base);
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.contact-hover-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateX(5px);
+}
+
+[data-theme="light"] .contact-hover-item:hover {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.contact-hover-item i {
+    transition: var(--transition-smooth);
+}
+
+.contact-hover-item:hover i {
+    transform: scale(1.2);
+    color: #60a5fa !important; /* Lighter/Bright blue on hover */
+}
+
+.contact-hover-item h6 {
+    transition: var(--transition-base);
+}
+
+.contact-hover-item:hover h6 {
+    color: var(--primary-color);
+}
+
+/* ---- Custom CTA Section Buttons ---- */
+.btn-cta-highlight {
+    background: #ffffff;
+    color: #3b82f6 !important;
+    border: 2px solid #ffffff;
+    padding: 12px 35px;
+    border-radius: 50px;
+    transition: var(--transition-base);
+}
+
+.btn-cta-highlight:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: transparent;
+    color: #ffffff !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-cta-outline-highlight {
+    color: #ffffff !important;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 12px 35px;
+    border-radius: 50px;
+    transition: var(--transition-base);
+}
+
+.btn-cta-outline-highlight:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: #ffffff;
+    color: #3b82f6 !important;
+    border-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-cta-highlight i {
+    transition: var(--transition-smooth);
+}
+
+.btn-cta-highlight:hover i {
+    transform: rotate(15deg) scale(1.2);
+}
+
+.btn-cta-highlight:active, .btn-cta-outline-highlight:active {
+    transform: scale(0.98);
+}
+
+/* ---- Blockquote Styling ---- */
+.blockquote p {
+    margin-bottom: 0.5rem !important;
+}
+
+.blockquote-footer {
+    margin-top: 0 !important;
+    font-size: 0.95rem;
+}
+
+/* ---- Gallery Filter Tabs ---- */
+.filter-btn {
+    border-radius: 50px !important;
+    padding: 10px 25px !important;
+    font-weight: 600 !important;
+    transition: var(--transition-base) !important;
+    min-width: 140px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    box-shadow: 0 5px 15px var(--primary-glow) !important;
+    transform: translateY(-2px);
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ---- Tool Items Process Page ---- */
+.tool-item-hover {
+    transition: var(--transition-base);
+    cursor: pointer;
+}
+
+.tool-item-hover .rounded-circle {
+    transition: var(--transition-smooth);
+}
+
+.tool-item-hover:hover .rounded-circle {
+    transform: scale(1.15) rotate(5deg);
+    background-color: rgba(59, 130, 246, 0.2) !important; /* Slightly brighter blue background */
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.15);
+}
+
+.tool-item-hover i {
+    transition: var(--transition-smooth);
+}
+
+.tool-item-hover:hover i {
+    transform: scale(1.1);
+}
+
+.tool-item-hover h5 {
+    transition: var(--transition-base);
+}
+
+.tool-item-hover:hover h5 {
+    color: var(--primary-color);
+}
+
+/* ---- Tonewood Rating Stars ---- */
+.tone-stars {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.tone-stars i.active {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.tone-stars i:not(.active) {
+    color: var(--surface-light);
+}
+
+/* ---- Wood Characteristic Badges ---- */
+.badge-hover {
+    transition: var(--transition-base);
+    cursor: default;
+}
+
+.badge-hover:hover {
+    transform: scale(1.1);
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+}
+
+/* ---- CTA Premium Buttons ---- */
+.btn-hover-premium {
+    transition: var(--transition-base);
+}
+
+.btn-hover-premium:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    filter: brightness(1.1);
+}
+
+/* ---- Global Form Controls ---- */
+.form-control, .form-select {
+    background-color: var(--surface-light) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    transition: var(--transition-base);
+    border-radius: 12px;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--surface-light) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 12px var(--primary-glow);
+    color: var(--text-primary) !important;
+}
+
+.form-floating label {
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%231c0e08' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+[data-theme="dark"] .form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f9fafb' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* Global Form Checkbox */
+.form-check-input {
+    background-color: var(--surface-light);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+[data-theme="light"] .form-check-input {
+    background-color: #ffffff;
+    border-color: rgba(0,0,0,0.2);
 }

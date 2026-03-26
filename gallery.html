@@ -22,14 +22,14 @@
 
     <!-- Header / Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-xl fixed-top">
             <div class="container">
                 <a class="navbar-brand brand-font fs-3 text-glow" href="index.html">
                     <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav">
-                    <i class="bi bi-list text-white fs-1"></i>
+                    <i class="bi bi-list fs-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
@@ -45,10 +45,10 @@
                     <div class="d-flex align-items-center gap-3">
                         <a href="login.html" class="btn btn-outline-premium btn-sm">Login</a>
                         <a href="signup.html" class="btn btn-premium btn-sm">Sign Up</a>
-                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm">
+                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm" aria-label="Toggle Theme">
                             <i class="bi bi-sun-fill"></i>
                         </button>
-                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm">
+                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
                     </div>
@@ -62,8 +62,12 @@
         <img src="images/hero-gallery.png" alt="Guitar Gallery" class="hero-bg">
         <div class="hero-overlay"></div>
         <div class="container hero-content text-center">
-            <h1 class="hero-title">The Collection</h1>
-            <p class="hero-subtitle mb-0">A visual journey through our most celebrated custom builds.</p>
+            <h1 class="hero-title">The Masterpiece <br><span class="text-primary">Collection.</span></h1>
+            <p class="hero-subtitle mb-5">Experience a legacy of handcrafted excellence, where exotic tonewoods and artisan precision converge into singular works of musical art.</p>
+            <div class="hero-btns d-flex flex-wrap justify-content-center gap-3">
+                <a href="contact.html" class="btn btn-premium btn-lg">Start Your Build</a>
+                <a href="process.html" class="btn btn-outline-premium btn-lg">Build Process</a>
+            </div>
         </div>
     </section>
 
@@ -72,7 +76,7 @@
         <div class="container">
             <!-- Filter Controls -->
             <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 reveal-left">
-                <button class="btn btn-primary filter-btn active" data-filter="all">All Masterpieces</button>
+                <button class="btn btn-premium filter-btn active" data-filter="all">All Masterpieces</button>
                 <button class="btn btn-outline-premium filter-btn" data-filter="electric">Electric</button>
                 <button class="btn btn-outline-premium filter-btn" data-filter="acoustic">Acoustic</button>
                 <button class="btn btn-outline-premium filter-btn" data-filter="bass">Bass</button>
@@ -146,29 +150,29 @@
     <footer>
         <div class="container">
             <div class="row g-4 mb-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 text-center text-lg-start">
                     <a class="navbar-brand brand-font fs-3 text-glow mb-4 d-block" href="index.html">
                         <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
                     </a>
                     <p class="text-secondary pe-lg-5">Crafting the future of sound through traditional luthier
                         techniques and exotic wood selection.</p>
-                    <div class="d-flex mt-4">
+                    <div class="d-flex mt-4 gap-3 justify-content-center justify-content-lg-start">
                         <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="footer-link">Home 1</a></li>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
                         <li><a href="about.html" class="footer-link">About Us</a></li>
                         <li><a href="gallery.html" class="footer-link">Gallery</a></li>
                         <li><a href="shop.html" class="footer-link">Instruments</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="mb-4">Services</h5>
                     <ul class="list-unstyled">
                         <li><a href="process.html" class="footer-link">Custom Build</a></li>

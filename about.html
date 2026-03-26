@@ -17,14 +17,14 @@
 
     <!-- Header / Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-xl fixed-top">
             <div class="container">
                 <a class="navbar-brand brand-font fs-3 text-glow" href="index.html">
                     <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav">
-                    <i class="bi bi-list text-white fs-1"></i>
+                    <i class="bi bi-list fs-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
@@ -40,10 +40,10 @@
                     <div class="d-flex align-items-center gap-3">
                         <a href="login.html" class="btn btn-outline-premium btn-sm">Login</a>
                         <a href="signup.html" class="btn btn-premium btn-sm">Sign Up</a>
-                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm">
+                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm" aria-label="Toggle Theme">
                             <i class="bi bi-sun-fill"></i>
                         </button>
-                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm">
+                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
                     </div>
@@ -57,8 +57,12 @@
         <img src="images/hero-about.png" alt="About the Luthier" class="hero-bg">
         <div class="hero-overlay"></div>
         <div class="container hero-content text-center">
-            <h1 class="hero-title">Our Story</h1>
-            <p class="hero-subtitle mb-0">Crafting excellence through decades of passion and wood shavings.</p>
+            <h1 class="hero-title">The Artisan's <br><span class="text-primary">Journey.</span></h1>
+            <p class="hero-subtitle mb-5">From the first rough-cut slab to the final resonant chime, every StringCraft instrument is a legacy of acoustic mastery and unparalleled dedication.</p>
+            <div class="hero-btns d-flex flex-wrap justify-content-center gap-3">
+                <a href="gallery.html" class="btn btn-premium btn-lg">Explore Creations</a>
+                <a href="contact.html" class="btn btn-outline-premium btn-lg">Start Your Build</a>
+            </div>
         </div>
     </section>
 
@@ -66,7 +70,7 @@
     <section class="section-padding">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0 reveal-left">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal-left text-center text-lg-start px-4 px-lg-0">
                     <h2 class="section-title mb-4">Artisanal Roots</h2>
                     <p class="lead text-primary mb-4">It all started in a small basement workshop with a single slab of
                         mahogany.</p>
@@ -138,11 +142,10 @@
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-5 mb-lg-0 reveal-left">
                     <h2 class="section-title mb-4">Our Core Philosophy</h2>
-                    <blockquote class="blockquote border-start border-primary border-4 ps-4 mb-4">
-                        <p class="fs-4 fst-italic">"The wood tells you what it wants to become. My job is simply to
+                    <blockquote class="blockquote border-start border-primary border-4 ps-4 mb-5">
+                        <p class="fs-4 fst-italic mb-2">"The wood tells you what it wants to become. My job is simply to
                             listen and remove everything that isn't a guitar."</p>
-                        <footer class="blockquote-footer mt-2">Marcus Thorne, <cite title="Source Title">Master
-                                Luthier</cite></footer>
+                        <footer class="blockquote-footer mb-0">Marcus Thorne, <cite title="Master Luthier">Master Luthier</cite></footer>
                     </blockquote>
                     <p class="text-secondary mb-4">We reject the assembly-line approach to guitar making. We believe in
                         the slow craft—where every joint is hand-fitted and every finish is hand-rubbed. This attention
@@ -180,29 +183,29 @@
     <footer>
         <div class="container">
             <div class="row g-4 mb-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 text-center text-lg-start">
                     <a class="navbar-brand brand-font fs-3 text-glow mb-4 d-block" href="index.html">
                         <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
                     </a>
                     <p class="text-secondary pe-lg-5">Crafting the future of sound through traditional luthier
                         techniques and exotic wood selection.</p>
-                    <div class="d-flex mt-4">
+                    <div class="d-flex mt-4 gap-3 justify-content-center justify-content-lg-start">
                         <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="footer-link">Home 1</a></li>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
                         <li><a href="about.html" class="footer-link">About Us</a></li>
                         <li><a href="gallery.html" class="footer-link">Gallery</a></li>
                         <li><a href="shop.html" class="footer-link">Instruments</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="mb-4">Services</h5>
                     <ul class="list-unstyled">
                         <li><a href="process.html" class="footer-link">Custom Build</a></li>
