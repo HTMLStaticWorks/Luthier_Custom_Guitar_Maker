@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('js-enabled');
     /* --- Sticky Header + Back to Top Logic --- */
     const navbar = document.querySelector('.navbar');
 
@@ -83,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* --- Scroll Reveal Animations --- */
     const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.10,
+        rootMargin: '0px 0px -20px 0px'
     };
 
     const scrollObserver = new IntersectionObserver((entries) => {
