@@ -24,15 +24,28 @@
 
     <!-- Header / Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-xl fixed-top">
             <div class="container">
                 <a class="navbar-brand brand-font fs-3 text-glow" href="index.html">
                     <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
                 </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
-                    <i class="bi bi-list fs-1"></i>
-                </button>
+                <div class="d-flex align-items-center gap-2 ms-auto order-xl-last">
+                    <div class="d-none d-sm-flex align-items-center gap-2 me-2">
+                        <a href="login.html" class="btn btn-outline-premium btn-sm">Login</a>
+                        <a href="signup.html" class="btn btn-premium btn-sm">Sign Up</a>
+                    </div>
+                    <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm" aria-label="Toggle Theme">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+                    <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm" aria-label="Toggle RTL">
+                        <i class="bi bi-translate"></i>
+                    </button>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav">
+                        <i class="bi bi-list fs-1"></i>
+                    </button>
+                </div>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
@@ -44,15 +57,10 @@
                         <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <div class="d-flex align-items-center gap-3">
-                        <a href="login.html" class="btn btn-outline-premium btn-sm">Login</a>
-                        <a href="signup.html" class="btn btn-premium btn-sm">Sign Up</a>
-                        <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm" aria-label="Toggle Theme">
-                            <i class="bi bi-sun-fill"></i>
-                        </button>
-                        <button id="rtl-toggle" class="btn btn-secondary rounded-circle shadow-sm" aria-label="Toggle RTL">
-                            <i class="bi bi-translate"></i>
-                        </button>
+                    <!-- Mobile Auth Buttons -->
+                    <div class="d-flex d-sm-none flex-column gap-2 mt-3 pb-3 border-bottom border-secondary border-opacity-25">
+                        <a href="login.html" class="btn btn-outline-premium btn-sm w-100">Login</a>
+                        <a href="signup.html" class="btn btn-premium btn-sm w-100">Sign Up</a>
                     </div>
                 </div>
             </div>

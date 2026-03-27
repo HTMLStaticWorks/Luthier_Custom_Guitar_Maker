@@ -182,44 +182,57 @@ a {
     }
 }
 
-/* Optimized spacing for Tablet Landscape and Small Laptops (1024px Range) */
-@media (min-width: 992px) and (max-width: 1199px) {
+/* Optimized spacing for Tablet Landscape and Small Laptops (992px - 1400px Range) */
+@media (min-width: 992px) and (max-width: 1399px) {
     .nav-link {
-        margin: 0 4px !important;
-        padding: 8px 0 !important;
-        font-size: 0.8rem !important;
+        margin: 0 8px !important;
+        font-size: 0.85rem !important;
     }
     .navbar-brand {
-        font-size: 1.15rem !important;
+        font-size: 1.25rem !important;
     }
     .gap-3 {
-        gap: 0.5rem !important;
+        gap: 0.75rem !important;
     }
     .navbar .container {
         max-width: 100% !important;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .btn-sm {
-        padding: 6px 12px !important;
-        font-size: 0.75rem !important;
+        padding: 8px 16px !important;
+        font-size: 0.8rem !important;
     }
-    /* Prevents overlap in the 992-1200 range */
-    .navbar-collapse {
-        margin-right: 1rem;
+}
+
+/* Extra tight spacing for 992px - 1100px */
+@media (min-width: 992px) and (max-width: 1100px) {
+    .nav-link {
+        margin: 0 4px !important;
+        font-size: 0.8rem !important;
     }
-    .order-lg-last {
-        flex-shrink: 0;
+    .navbar-brand {
+        font-size: 1.1rem !important;
+    }
+    .gap-3 {
+        gap: 0.4rem !important;
+    }
+}
+
+/* Tight desktop defaults (1400px - 1600px) */
+@media (min-width: 1400px) {
+    .nav-link {
+        margin: 0 10px !important;
     }
 }
 
 /* Base desktop spacing to prevent icon/button collision */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .navbar-collapse {
-        margin-right: 2rem;
+        justify-content: space-between;
     }
-    .order-lg-last {
-        flex-shrink: 0;
+    .navbar-nav {
+        gap: 0px;
     }
 }
 
@@ -265,7 +278,8 @@ a {
 .nav-link {
     color: var(--text-secondary) !important;
     font-weight: 500;
-    margin: 0 15px;
+    margin: 0 12px;
+    white-space: nowrap;
     position: relative;
     padding: 10px 0;
 }
@@ -1239,12 +1253,12 @@ footer .form-control::placeholder {
 }
 
 .form-control::placeholder, .form-select::placeholder {
-    color: var(--text-secondary) !important;
-    opacity: 0.8 !important;
+    color: var(--text-secondary);
+    opacity: 0.8;
 }
 
 [data-theme="dark"] .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .form-control:focus, .form-select:focus {
@@ -1255,7 +1269,31 @@ footer .form-control::placeholder {
 }
 
 .form-floating label {
+    color: var(--text-secondary);
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+    color: var(--primary-color) !important;
+    opacity: 0.8 !important;
+    transform: scale(0.85) translateY(-0.75rem) translateX(0.15rem) !important;
+}
+
+/* Ensure placeholder is hidden when label is in default position */
+.form-floating > .form-control::placeholder {
+    color: transparent !important;
+}
+
+.form-floating > .form-control:focus::placeholder,
+.form-floating > .form-control:not(:placeholder-shown)::placeholder {
     color: var(--text-secondary) !important;
+    opacity: 0.5 !important;
+}
+
+/* Extra padding for textarea in form-floating */
+.form-floating > textarea.form-control {
+    padding-top: 2.5rem !important;
 }
 
 /* Ensure secondary text is visible across all themes */
