@@ -45,10 +45,10 @@
     --accent-glow: 0 0 20px rgba(180, 83, 9, 0.1);
     
     /* Hero Overlays - Light */
-    --hero-overlay: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+    --hero-overlay: linear-gradient(to bottom, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.55));
     --hero-brightness: 0.95;
     --hero-title-color: #000000;
-    --hero-subtitle-color: #1a1a1a;
+    --hero-subtitle-color: #000000;
 }
 
 /* Light Mode Form Overrides */
@@ -249,6 +249,10 @@ a {
         height: auto !important;
         max-height: 400px;
         object-fit: contain !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-position: center !important;
     }
 }
 
@@ -463,9 +467,10 @@ a {
     color: var(--hero-subtitle-color, #ffffff) !important;
     margin-bottom: 40px;
     opacity: 0;
+    font-weight: 500;
     transform: translateY(30px);
     animation: fadeInUp 1s forwards 0.4s;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .hero-btns {
@@ -1341,12 +1346,13 @@ input:-webkit-autofill:active{
 }
 
 [data-theme="light"] .hero-subtitle {
-    color: #1a110b !important; /* Extremely dark brown for maximum contrast */
+    color: #000000 !important;
+    font-weight: 500 !important;
 }
 
 [data-theme="light"] .hero-section .btn-outline-premium {
-    color: #1a110b !important;
-    border-color: #1a110b !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
 }
 
 [data-theme="light"] .hero-section .btn-premium {
