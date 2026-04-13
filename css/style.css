@@ -60,6 +60,10 @@
     background-color: var(--primary-color);
     border-color: var(--primary-color);
 }
+
+[data-theme="light"] .text-primary:hover {
+    color: #92400e !important; /* Deeper brown for light mode visibility */
+}
 [data-theme="light"] .form-range::-webkit-slider-runnable-track {
     background-color: rgba(0,0,0,0.1);
 }
@@ -315,6 +319,11 @@ a {
 
 .text-primary {
     color: var(--primary-color) !important;
+}
+
+.text-primary:hover {
+    color: #fbbf24 !important; /* Brighter Amber for visibility */
+    text-shadow: 0 0 8px rgba(251, 191, 36, 0.3);
 }
 
 .bg-primary {
