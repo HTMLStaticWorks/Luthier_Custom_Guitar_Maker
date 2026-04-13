@@ -22,23 +22,26 @@
 
 <body>
 
-    <!-- Header / Navbar -->
+                <!-- Header / Navbar -->
     <header>
-        <nav class="navbar navbar-expand-xl fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <a class="navbar-brand brand-font fs-3 text-glow" href="index.html">
                     <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
                 </a>
-                <div class="d-flex align-items-center gap-2 ms-auto order-xl-last">
-                    <div class="d-none d-sm-flex align-items-center gap-2 me-2">
+                <div class="d-flex align-items-center gap-2 ms-auto order-lg-last">
+                    <!-- Desktop Controls (Visible only on LG and up) -->
+                    <div class="d-none d-lg-flex align-items-center gap-3">
                         <a href="login.html" class="btn btn-outline-premium btn-sm">Login</a>
+                        <button class="btn btn-light rounded-circle shadow-sm theme-toggle" aria-label="Toggle Theme">
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
+                        <button class="btn btn-outline-premium btn-sm rtl-toggle" aria-label="Toggle RTL">
+                            RTL
+                        </button>
                     </div>
-                    <button id="theme-toggle" class="btn btn-light rounded-circle shadow-sm" aria-label="Toggle Theme">
-                        <i class="bi bi-sun-fill"></i>
-                    </button>
-                    <button id="rtl-toggle" class="btn btn-outline-premium btn-sm" aria-label="Toggle RTL">
-                        RTL
-                    </button>
+                    
+                    <!-- Navbar Toggler -->
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNav">
                         <i class="bi bi-list fs-1"></i>
@@ -56,9 +59,19 @@
                         <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <!-- Mobile Auth Buttons -->
-                    <div class="d-flex d-sm-none flex-column gap-2 mt-3 pb-3 border-bottom border-secondary border-opacity-25">
-                        <a href="login.html" class="btn btn-outline-premium btn-sm w-100">Login</a>
+                    <!-- Mobile/Tablet Controls (Visible only when menu is collapsed) -->
+                    <div class="d-flex d-lg-none flex-column gap-3 mt-3 pb-3 border-top border-secondary border-opacity-25 pt-4">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="d-flex gap-3">
+                                <button class="btn btn-light rounded-circle shadow-sm theme-toggle" aria-label="Toggle Theme">
+                                    <i class="bi bi-sun-fill"></i>
+                                </button>
+                                <button class="btn btn-outline-premium btn-sm rtl-toggle" aria-label="Toggle RTL">
+                                    RTL
+                                </button>
+                            </div>
+                        </div>
+                        <a href="login.html" class="btn btn-premium w-100">Login</a>
                     </div>
                 </div>
             </div>

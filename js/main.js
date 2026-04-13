@@ -29,26 +29,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* --- Theme Toggle --- */
-    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleBtns = document.querySelectorAll('.theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'dark';
 
     document.documentElement.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
+    themeToggleBtns.forEach(btn => updateThemeIcon(btn, currentTheme));
 
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
+    themeToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             const current = document.documentElement.getAttribute('data-theme');
             const targetTheme = current === 'dark' ? 'light' : 'dark';
             
             document.documentElement.setAttribute('data-theme', targetTheme);
             localStorage.setItem('theme', targetTheme);
-            updateThemeIcon(targetTheme);
+            themeToggleBtns.forEach(b => updateThemeIcon(b, targetTheme));
         });
-    }
+    });
 
-    function updateThemeIcon(theme) {
-        if (!themeToggleBtn) return;
-        const icon = themeToggleBtn.querySelector('i');
+    function updateThemeIcon(btn, theme) {
+        const icon = btn.querySelector('i');
         if (theme === 'dark') {
             icon.classList.remove('bi-moon-fill');
             icon.classList.add('bi-sun-fill');
@@ -59,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* --- RTL Toggle --- */
-    const rtlToggleBtn = document.getElementById('rtl-toggle');
+    const rtlToggleBtns = document.querySelectorAll('.rtl-toggle');
     const isRtl = localStorage.getItem('rtl') === 'true';
 
     if (isRtl) {
@@ -67,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.classList.add('rtl');
     }
 
-    if (rtlToggleBtn) {
-        rtlToggleBtn.addEventListener('click', () => {
+    rtlToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             const currentRtl = document.documentElement.getAttribute('dir') === 'rtl';
             const targetRtl = !currentRtl;
             
@@ -80,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             localStorage.setItem('rtl', targetRtl);
         });
-    }
+    });
 
     /* --- Scroll Reveal Animations --- */
     const observerOptions = {
