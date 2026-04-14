@@ -144,6 +144,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (modalPrice) modalPrice.innerText = price || '';
         });
     });
+
+    /* --- Password Visibility Toggle --- */
+    const passwordToggles = document.querySelectorAll('.password-toggle');
+    passwordToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const input = btn.parentElement.querySelector('input');
+            const icon = btn.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
+        });
+    });
+
     /* --- Gallery Filtering Logic --- */
     const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');

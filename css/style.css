@@ -916,10 +916,52 @@ a {
     }
 }
 
-/* Custom Backgrounds */
+/* Custom Backgrounds & Visibility Overrides */
 .bg-darker {
     background-color: #0f0a07 !important;
+    color: #ffffff !important;
 }
+
+/* Force light colors for common elements inside dark sections regardless of theme */
+.bg-darker .section-title,
+.bg-darker h1, 
+.bg-darker h2, 
+.bg-darker h3:not(.card-premium h3), 
+.bg-darker h4:not(.card-premium h4), 
+.bg-darker h5:not(.card-premium h5),
+.bg-darker h6:not(.card-premium h6),
+.bg-darker .text-secondary:not(.card-premium *),
+.bg-darker p:not(.card-premium p),
+.bg-darker .nav-link,
+.bg-darker .bi:not(.card-premium .bi),
+.bg-darker .social-icon,
+.bg-darker .form-label,
+.bg-darker .form-check-label {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .bg-darker .text-secondary:not(.card-premium *) {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Ensure secondary colors don't bleed into cards which might be light in light mode */
+[data-theme="light"] .bg-darker .card-premium .text-secondary {
+    color: #4b5563 !important;
+}
+
+[data-theme="light"] .bg-darker .card-premium h1,
+[data-theme="light"] .bg-darker .card-premium h2,
+[data-theme="light"] .bg-darker .card-premium h3,
+[data-theme="light"] .bg-darker .card-premium h4,
+[data-theme="light"] .bg-darker .card-premium h5,
+[data-theme="light"] .bg-darker .card-premium h6,
+[data-theme="light"] .bg-darker .card-premium p,
+[data-theme="light"] .bg-darker .card-premium .form-label,
+[data-theme="light"] .bg-darker .card-premium .form-check-label {
+    color: #1c0e08 !important;
+}
+
+
 
 /* Responsive Utilities */
 @media (min-width: 768px) {
