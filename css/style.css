@@ -1492,3 +1492,16 @@ input:-webkit-autofill:active{
     justify-content: center !important;
     text-align: center !important;
 }
+
+/* Auth Link Visibility Fix */
+.container-auth a.text-primary:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px var(--primary-color);
+    text-decoration: underline !important;
+    opacity: 1 !important;
+}
+
+[data-theme="light"] .container-auth a.text-primary:hover {
+    color: var(--primary-color) !important;
+    font-weight: 700 !important;
+}
