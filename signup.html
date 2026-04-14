@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,14 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="auth-page">
 
-    <div class="auth-wrapper min-vh-100 d-flex align-items-center justify-content-center p-3 position-relative overflow-hidden">
-        <!-- Floating Settings -->
-        <div class="position-absolute top-0 end-0 p-3 p-md-4 d-flex flex-nowrap align-items-center gap-2 gap-md-3 floating-settings" style="z-index: 9999;">
+    <div
+        class="auth-wrapper min-vh-100 d-flex align-items-center justify-content-center p-3 position-relative overflow-hidden">
+        <!-- Desktop Floating Settings (Hidden on Mobile) -->
+        <div class="position-absolute top-0 end-0 p-4 d-none d-lg-flex align-items-center gap-3 floating-settings"
+            style="z-index: 9999;">
             <button class="btn btn-primary rounded-circle shadow-lg theme-toggle" aria-label="Toggle theme">
                 <i class="bi bi-sun-fill"></i>
             </button>
@@ -26,44 +30,66 @@
             </button>
         </div>
         <!-- Background Decor -->
-        <img src="https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg" alt="Auth Background" class="position-absolute w-100 h-100 object-fit-cover start-0 top-0 grayscale-hover">
+        <img src="https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg" alt="Auth Background"
+            class="position-absolute w-100 h-100 object-fit-cover start-0 top-0 grayscale-hover">
         <div class="position-absolute w-100 h-100 start-0 top-0 bg-dark opacity-75"></div>
 
         <div class="container container-auth">
+            <!-- Mobile Toggles (Aligned Right) -->
+            <div class="d-flex d-lg-none justify-content-end align-items-center gap-3 mb-4 reveal-left">
+                <button class="btn btn-primary rounded-circle shadow-lg theme-toggle" aria-label="Toggle theme">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+                <button class="btn btn-outline-premium btn-sm rtl-toggle" aria-label="Toggle RTL">
+                    RTL
+                </button>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-10 reveal-left active">
                     <div class="glass-card">
                         <div class="text-center mb-5">
                             <a href="index.html" class="navbar-brand brand-font fs-2 text-glow mb-4 d-inline-block">
-                                <i class="bi bi-soundwave text-primary me-2"></i><span class="text-primary">String</span>Craft
+                                <i class="bi bi-soundwave text-primary me-2"></i><span
+                                    class="text-primary">String</span>Craft
                             </a>
                             <h2 class="h4">Join the Artisan Community</h2>
-                            <p class="text-secondary small">Start your custom build journey and get access to exclusive tonewood reservation.</p>
+                            <p class="text-secondary small">Start your custom build journey and get access to exclusive
+                                tonewood reservation.</p>
                         </div>
                         <form id="signupForm">
                             <div class="mb-4">
-                                <label for="firstName" class="form-label text-secondary small fw-bold mb-2">First Name</label>
+                                <label for="firstName" class="form-label text-secondary small fw-bold mb-2">First
+                                    Name</label>
                                 <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
                             </div>
                             <div class="mb-4">
-                                <label for="lastName" class="form-label text-secondary small fw-bold mb-2">Last Name</label>
+                                <label for="lastName" class="form-label text-secondary small fw-bold mb-2">Last
+                                    Name</label>
                                 <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
                             </div>
                             <div class="mb-4">
-                                <label for="signupEmail" class="form-label text-secondary small fw-bold mb-2">Email Address</label>
-                                <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email">
+                                <label for="signupEmail" class="form-label text-secondary small fw-bold mb-2">Email
+                                    Address</label>
+                                <input type="email" class="form-control" id="signupEmail"
+                                    placeholder="Enter your email">
                             </div>
                             <div class="mb-4">
-                                <label for="signupPass" class="form-label text-secondary small fw-bold mb-2">Create Password</label>
-                                <input type="password" class="form-control" id="signupPass" placeholder="Enter password">
+                                <label for="signupPass" class="form-label text-secondary small fw-bold mb-2">Create
+                                    Password</label>
+                                <input type="password" class="form-control" id="signupPass"
+                                    placeholder="Enter password">
                             </div>
                             <div class="mb-4">
-                                <label for="confirmPass" class="form-label text-secondary small fw-bold mb-2">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirmPass" placeholder="Confirm password">
+                                <label for="confirmPass" class="form-label text-secondary small fw-bold mb-2">Confirm
+                                    Password</label>
+                                <input type="password" class="form-control" id="confirmPass"
+                                    placeholder="Confirm password">
                             </div>
                             <div class="form-check mb-5 small">
                                 <input class="form-check-input" type="checkbox" id="termsCheck">
-                                <label class="form-check-label text-secondary" for="termsCheck">I agree to the <a href="#" class="text-primary text-decoration-none fw-bold">Terms & Conditions</a> and our <a href="#" class="text-primary text-decoration-none fw-bold">Privacy Policy</a>.</label>
+                                <label class="form-check-label text-secondary text-nowrap-mobile" for="termsCheck">I
+                                    agree to the <a href="#" class="text-primary text-decoration-none fw-bold">Terms &
+                                        Conditions</a></label>
                             </div>
                             <button type="submit" class="btn btn-premium btn-lg w-100 mb-4">Create My Account</button>
 
@@ -73,11 +99,14 @@
 
                             <div class="d-flex justify-content-center gap-3 mb-5">
                                 <a href="#" class="social-btn shadow-sm" title="Google"><i class="bi bi-google"></i></a>
-                                <a href="#" class="social-btn shadow-sm" title="Facebook"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="social-btn shadow-sm" title="Facebook"><i
+                                        class="bi bi-facebook"></i></a>
                                 <a href="#" class="social-btn shadow-sm" title="Apple"><i class="bi bi-apple"></i></a>
                             </div>
 
-                            <p class="text-center text-secondary small mb-0 text-nowrap-mobile">Already an artisan member? <a href="login.html" class="text-primary text-decoration-none fw-bold">Login here</a></p>
+                            <p class="text-center text-secondary small mb-0 text-nowrap-mobile">Already an artisan
+                                member? <a href="login.html" class="text-primary text-decoration-none fw-bold">Login
+                                    here</a></p>
                         </form>
                     </div>
                 </div>
@@ -90,6 +119,5 @@
     <!-- Custom JS -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
-
-
