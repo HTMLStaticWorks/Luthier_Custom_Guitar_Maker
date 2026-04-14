@@ -49,6 +49,15 @@
     --hero-brightness: 0.95;
     --hero-title-color: #000000;
     --hero-subtitle-color: #000000;
+
+    /* Custom Backgrounds for Light Mode */
+    --darker-bg: #f3eae2;
+    --darker-text: #1c0e08;
+}
+
+:root {
+    --darker-bg: #0f0a07;
+    --darker-text: #ffffff;
 }
 
 /* Light Mode Form Overrides */
@@ -65,10 +74,18 @@
     color: #92400e !important; /* Deeper brown for light mode visibility */
 }
 [data-theme="light"] .form-range::-webkit-slider-runnable-track {
-    background-color: rgba(0,0,0,0.1);
+    background-color: var(--border-color);
 }
 [data-theme="light"] .form-range::-moz-range-track {
-    background-color: rgba(0,0,0,0.1);
+    background-color: var(--border-color);
+}
+.form-range::-webkit-slider-thumb {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+.form-range::-moz-range-thumb {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 0 10px var(--primary-glow);
 }
 
 /* Global Styles */
@@ -110,8 +127,17 @@ a {
     height: var(--header-height);
     background: var(--bg-color) !important; /* Solid background */
     transition: var(--transition-smooth);
-    border-bottom: none;
+    border-bottom: 1px solid transparent;
     z-index: 1000;
+}
+
+[data-theme="light"] .navbar.scrolled {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar.scrolled {
@@ -916,10 +942,40 @@ a {
     }
 }
 
+/* ---- Shop Filter Card (Theme-Aware) ---- */
+.filter-card {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-base);
+}
+
+[data-theme="light"] .filter-card {
+    background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .filter-card {
+    background-color: #1a110b;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.filter-card h4,
+.filter-card .form-check-label,
+.filter-card label {
+    color: var(--text-primary) !important;
+}
+
+.filter-card .text-secondary {
+    color: var(--text-secondary) !important;
+}
+
 /* Custom Backgrounds & Visibility Overrides */
 .bg-darker {
-    background-color: #0f0a07 !important;
-    color: #ffffff !important;
+    background-color: var(--darker-bg) !important;
+    color: var(--darker-text) !important;
+    border: 1px solid var(--border-color);
 }
 
 /* Force light colors for common elements inside dark sections regardless of theme */
@@ -937,12 +993,10 @@ a {
 .bg-darker .social-icon,
 .bg-darker .form-label,
 .bg-darker .form-check-label {
-    color: #ffffff !important;
+    color: var(--darker-text) !important;
 }
 
-[data-theme="light"] .bg-darker .text-secondary:not(.card-premium *) {
-    color: rgba(255, 255, 255, 0.7) !important;
-}
+/* Removed conflicting text-secondary override */
 
 /* Ensure secondary colors don't bleed into cards which might be light in light mode */
 [data-theme="light"] .bg-darker .card-premium .text-secondary {
@@ -966,7 +1020,7 @@ a {
 /* Responsive Utilities */
 @media (min-width: 768px) {
     .border-start-md {
-        border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-left: 1px solid var(--border-color) !important;
     }
 }
 
